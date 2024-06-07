@@ -220,6 +220,11 @@ span {
     border-color: var(--main-color);
     transform: scale(1.02);
 }
+.services-container .services-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .services-box i {
     font-size: 7rem;
