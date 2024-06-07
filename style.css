@@ -196,13 +196,10 @@ span {
     margin-bottom: 5rem;
 
 }
-
 .services-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2rem; /* Adjust gap between service boxes if necessary */
 }
 
 .services-container .services-box {
@@ -211,19 +208,23 @@ span {
     padding: 3rem 2rem 4rem;
     border-radius: 2rem;
     text-align: center;
-    border: .2rem solid var(--bg-color) ;
-    transition: .5 ease;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+    box-sizing: border-box;
+    min-height: 40rem; /* Set a minimum height to ensure consistency */
+    max-width: 30rem; /* Optionally set a maximum width */
+}
 
+/* Optional: Ensuring all boxes are of equal height in a row */
+.services-container .services-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .services-container .services-box:hover {
     border-color: var(--main-color);
     transform: scale(1.02);
-}
-.services-container .services-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .services-box i {
